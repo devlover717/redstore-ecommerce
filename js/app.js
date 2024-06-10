@@ -22,12 +22,21 @@ window.addEventListener('load', () => {
 
 // navbar toggle 
 
-const navUl = document.querySelector('.nav-ul'); 
-const bars = document.querySelector('#bars')
+const navToggle = document.querySelector('#bars') 
+const linksCon = document.querySelector('.links-container')
+const links = document.querySelector('.links')
 
 bars.addEventListener('click', () => {
     bars.classList.toggle('fa-xmark')
-    navUl.classList.toggle('nav-open')
+
+    const containerHeight = linksCon.getBoundingClientRect().height
+    const linksHeight = links.getBoundingClientRect().height
+
+    if (containerHeight === 0) {
+        linksCon.style.height = `${linksHeight}px`
+    } else {
+        linksCon.style.height = 0
+    }
 })
 
 
