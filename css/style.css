@@ -53,6 +53,16 @@ a {
 }
 
 
+
+
+
+
+
+
+
+
+
+/* pre loader and top btn */
 .preloader {
     background: white;
     position: fixed;
@@ -77,12 +87,6 @@ a {
 
 
 
-
-
-/* ********** index.html ***********  */
-
-
-
 .top-btn {
     position: fixed;
     bottom: 5%;
@@ -96,9 +100,14 @@ a {
     outline: none;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7);
     cursor: pointer;
-    z-index: 10;
+    visibility: hidden;
 }
 
+
+.show-top-btn {
+    visibility: visible;
+    z-index: 10;
+}
 
 @media all and (min-width: 700px) {
     .top-btn {
@@ -106,6 +115,16 @@ a {
         bottom: 10%;
     }
 }
+
+
+
+
+
+
+
+/* ********** index.html ***********  */
+
+
 
 
 /* navbar */
@@ -138,16 +157,39 @@ a {
     font-size: 1.3rem;
 }
 
-.navbar {
+.navbar, .nav-container {
     display: flex;
     justify-content: space-between; 
-    padding: 1.5em;
     align-items: center;
-    width: 100%;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
     height: 90px;
     font-size: 1.1rem;
 }
 
+.nav-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.fixed-nav {
+    background: white;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1) ;    
+    padding:1.5em;
+}
+
+.fixed-nav .links-container {
+    top: 70px;
+}
 
 header {
     background: var(--RADIAL-GRADIENT);
@@ -327,7 +369,6 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(auto,300px));
     gap: 1.7em;
     place-content: center;
-    margin-top: 6em;
 }
 
 
@@ -335,6 +376,7 @@ header {
     text-align: center;
     color: var(--SHADE-GRAY-1);
     position: relative;
+    margin-bottom: 4em;
 }
 
 .section-heading::after{
@@ -749,3 +791,171 @@ footer .col4:hover {
 
 
 
+/* *********** all products *************  */
+
+.all-prod {
+    margin-top: 5em;
+    margin-bottom: 3em;
+}
+
+.heading h2 {
+    margin-bottom: 1em;
+} 
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.heading .btn {
+    cursor: pointer;
+    border: none;
+}
+
+.heading .buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 100px));
+    place-content: center;
+    gap: 1em;
+}
+
+.pagination {
+    padding: 1em;
+    display: flex;
+    gap: 1em;
+}
+
+.pagination a{
+    border: 1px solid var(--SHADE-RED);
+    padding: 0.5em 1em;
+}
+
+.pagination a:hover {
+    color: white;
+    background: var(--SHADE-RED);
+}
+
+
+@media all and (min-width: 850px) {
+   .heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+   }
+
+   .heading .buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ************ single product ***************  */
+
+.single-product {
+    margin-bottom: 7em;
+    margin-top: 5em;
+}
+
+.small-images {
+    display: flex;
+    gap: 0.5em;
+}
+
+.images {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 3em;
+}
+
+
+.sp-details p {
+    margin-bottom: 2em;
+}
+
+.sp-details h1 {
+    margin-bottom: 1em;
+}
+
+.small-images img {
+    cursor: pointer;
+}
+
+.sp-price {
+    margin-bottom: 1em;
+}
+
+.sp-details select {
+    border: 1px solid var(--SHADE-RED);
+    padding: 5px 10px;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 2em;
+} 
+
+.sp-details input {
+    width: 50px;
+    border: 1px solid var(--SHADE-RED);
+    font-size: 1rem;
+    padding: 5px 10px;
+    margin-right: 1em;
+    margin-bottom: 2em;
+}
+
+
+.sp-details h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+/* .related-products  */
+.related-products .heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.related-products .heading h2 {
+    margin-bottom: 0;
+}
+
+
+@media all and (min-width: 700px) {
+    .single-product {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2em;
+    }
+}

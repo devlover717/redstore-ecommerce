@@ -15,6 +15,32 @@ window.addEventListener('load', () => {
 
 
 
+// navbar fixed 
+
+const navbar = document.querySelector('.navbar')
+const topBtn = document.querySelector('.top-btn')
+
+window.addEventListener('scroll', () => {
+    const scrollHeight = window.pageYOffset
+    const navHeight = navbar.getBoundingClientRect().height
+
+    if (scrollHeight > navHeight) {
+        navbar.classList.add('fixed-nav')
+    } else {
+        navbar.classList.remove('fixed-nav')
+    }
+
+    if (scrollHeight > 2000 ) {
+        topBtn.classList.add('show-top-btn')
+    } else {
+        topBtn.classList.remove('show-top-btn')
+    }
+})
+
+
+
+
+
 
 
 
@@ -59,87 +85,6 @@ bars.addEventListener('click', () => {
 
 
 
-// reviews 
-
-const reviews = [
-    {
-        id: 1,
-        name: 'Sean Parker', 
-        desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, atque assumenda quia cupiditate culpa totam fuga voluptatem', 
-        img: 'images/user-1.png',
-        rating: `<i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>`
-    },
-    {
-        id: 2,
-        name: 'Mike Smith', 
-        desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, atque assumenda quia cupiditate culpa totam fuga voluptatem', 
-        img: 'images/user-2.png',
-        rating: `<i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>`
-    }, 
-    {
-        id: 3,
-        name: 'Mabel Joe', 
-        desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, atque assumenda quia cupiditate culpa totam fuga voluptatem', 
-        img: 'images/user-3.png', 
-        rating: `<i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>`
-    }
-]
-
-
-const revUserName = document.querySelector('#name');  
-const desc = document.querySelector('#desc')
-const img = document.querySelector('#img')
-const reviewsRating = document.querySelector('#reviewsRating')
-
-const leftBtn = document.querySelector('#leftRev'); 
-const rightBtn = document.querySelector('#rightRev')
-
-
-window.addEventListener('DOMContentLoaded', () => {
-    loadReview(index)
-})
-
-
-let index = 0;
-
-
-
-const loadReview = (index) => {
-    let item = reviews[index]
-    revUserName.innerHTML = item.name
-    desc.innerHTML = item.desc
-    img.src = item.img
-    reviewsRating.innerHTML = item.rating
-}
-
-
-
-leftBtn.addEventListener('click', () => {
-    index--;
-    if (index < 0) {
-        index = reviews.length -1 
-    }
-    loadReview(index)
-})
-
-rightBtn.addEventListener('click', () => {
-    index++;
-    if (index > reviews.length -1) {
-        index = 0
-    }
-    loadReview(index)
-})
 
 
 
@@ -147,3 +92,8 @@ rightBtn.addEventListener('click', () => {
 
 
 
+
+
+// date 
+const date = document.querySelector('#date')
+date.innerHTML = new Date().getFullYear()

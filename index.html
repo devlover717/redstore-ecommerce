@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MY - RedStore Ecommerce</title>
+    <title>MY - Home</title>
 
 
     <!-- css  -->
@@ -33,17 +33,17 @@
 
     <!-- navbar and hero section start -->
     <header>
-        <div class="container">
             <nav class="navbar">
-                <div class="logo">
-                    <img src="images/logo.png" alt="">
-                </div>
+                <div class="nav-container">
+                    <a href="index.html">
+                        <div class="logo">
+                            <img src="images/logo.png" alt="">
+                        </div>
+                    </a>
                 <div class="links-container">
                     <ul class="links">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Products</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="all-products.html">Products</a></li>
                         <li><a href="">Account</a></li>
                     </ul>
                 </div>
@@ -52,9 +52,12 @@
                     <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
                     <i id="bars" class="fa-solid fa-bars"></i>
                 </div>
+            </div>
+
             </nav>
 
 
+            <div class="container">
             <section class="hero">
                 <div class="row">
                     <div class="col2">
@@ -105,18 +108,20 @@
             <h2 class="section-heading">Featured Products</h2>
             
             <div class="featured-products col4row">
-                <div class="col4">
-                    <img src="images/product-1.jpg" alt="">
-                    <p class="name">Red Printed T-shirt</p>
-                    <div class="rating">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
+                <a href="single-product.html">
+                    <div class="col4">
+                        <img src="images/product-1.jpg" alt="">
+                        <p class="name">Red Printed T-shirt</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="price">$30.00</p>
                     </div>
-                    <p class="price">$30.00</p>
-                </div>
+                </a>
                 <div class="col4">
                     <img src="images/product-2.jpg" alt="">
                     <p class="name">IRX Shoes</p>
@@ -388,14 +393,14 @@
 
         </div>
 
-        <p class="copyright">Copyright 2024. All rights reserved.</p>
+        <p class="copyright">Copyright <span id="date">2020</span>. All rights reserved.</p>
 
 
     </footer>
     <!-- footer end -->
 
 
-
+    <script src="js/app.js"></script>
+    <script src="js/index.js"></script>
 </body>
-<script src="js/app.js"></script>
 </html>
