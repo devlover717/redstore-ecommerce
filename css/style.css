@@ -281,7 +281,7 @@ header {
     background: var(--SHADE-MEHROON);
 }
 
-.hero-image {
+.player-image {
     margin: 1em 0;
     margin-top: 5em;
 }
@@ -887,7 +887,7 @@ footer .col4:hover {
     max-width: 500px;
     margin: 0 auto;
     margin-bottom: 3em;
-}
+} 
 
 
 .sp-details p {
@@ -959,3 +959,332 @@ footer .col4:hover {
         gap: 2em;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ************* cart ********************  */
+
+.table-container {
+    margin: 4em 0;
+}
+
+table td {
+    vertical-align: top;
+    padding-top: 2em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td:last-child, table th:last-child{
+    text-align: right;
+}
+
+th, td {
+    vertical-align: center;
+    text-align: start;
+}
+
+
+
+td .img {
+    width: 80px;
+}
+
+td.cart-info {
+    display: flex;    
+    gap: 1em;
+    margin-bottom: 0.5em;
+}
+
+td.cart-info div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3px;
+}
+
+.cart-info a {
+    color: var(--SHADE-RED);
+    font-size: 13px;
+}
+
+
+table .red-bg th{
+    background-color: var(--SHADE-RED);
+    padding: 5px;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 1em;
+
+}
+
+
+table td input {
+    max-width: 40px;
+    padding: 0.3em;
+    border: 1px solid var(--SHADE-RED);
+}
+
+table .name {
+    display: none;
+}
+
+.cart-info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.small-table {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.small-table table {
+    border-top: 1px solid var(--SHADE-RED);
+    margin-top: 1em;
+    width: 100%;
+    gap: 5em;
+    margin: 2em 0;
+}
+
+.small-table table td {
+    padding: 1em 0;
+}
+
+.cart-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+@media all and (min-width: 600px) {
+    .cart-info {
+        flex-direction: row;
+    }
+
+    table .name {
+        display: inline;
+    }
+
+    .small-table table {
+        width: 40%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ***************** account ****************  */
+
+/* hero section  */
+
+
+.account-section {
+    background: var(--RADIAL-GRADIENT);
+}
+
+.account {
+    margin: 0 auto;
+}
+
+.account .player-image {
+    margin: 2em 0;
+}
+
+.form-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 500px));
+    gap: 3em;
+}
+
+
+.form-container {
+    width: 250px;
+    height: 350px;
+    background: white;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 3em;
+    padding-top: 1.5em;
+    overflow: hidden;
+}
+
+.form-buttons {
+    color: #222;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-buttons span {
+    margin: 0 16px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+form {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 1em;
+    width: 200px;
+    padding-top: 1em;
+}
+
+form input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+form input:focus {
+    outline: none;
+}
+
+.forms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -100px;
+}
+
+.form-hr {
+    width: 50px;
+    height: 3px; 
+    background: var(--SHADE-RED);
+    position: relative;
+    top: 5px;
+    left: 100px;
+}
+
+form a {
+    font-size: 0.8rem;
+    margin: 0 auto;
+    color: black;
+}
+
+button.btn {
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.login-form {
+    position: relative;
+    left: -50px;
+}
+
+.login-form button {
+    margin: 1em 0;
+}
+
+.signup-form {
+    position: relative;
+}
+
+.account .row {
+    padding: 3em 0;
+}
+
+.account .row .col2 {
+    margin: 0 auto;
+}
+
+
+@media screen and (min-width: 550px) {
+    .account .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .row .col2 {
+        flex-basis: 45%;
+    }
+
+
+    form input {
+        font-size: 0.8rem;
+    }
+
+    form .btn {
+        font-size: 0.8rem;
+    }
+
+    form a {
+        font-size: 0.7rem;
+    }
+
+    .form-buttons span {
+        font-size: 0.9rem;
+    }
+} 
+

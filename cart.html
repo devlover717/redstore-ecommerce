@@ -58,38 +58,81 @@
 
 
 
-    <!-- all products -->
-    <div class="all-prod small-container">
-        <div class="heading">
-            <h2>All Products</h2>
-            <div class="buttons filter-btn-con">
-                <!-- <button data-id="all" class="filter-btn btn">All</button> -->
-            </div>
-        </div>
-        <div id="productContainer" class="col4row">
-            <!-- <div class="col4">
-                <img src="images/product-1.jpg" alt="">
-                <p class="name">Red Printed T-shirt</p>
-                <div class="rating">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                </div>
-                <p class="price">$30.00</p>
-            </div> -->
-        </div>
-        <div class="pagination">
-            <a href="">1</a>
-            <a href="">2</a>
-            <a href="">3</a>
-            <a href="">4</a>
-            <a href="">&#8594;</a>
-        </div>
-    </div>
-    <!-- all products end  -->
+    <!-- cart start  -->
+    <div class="small-container ">
+        <div class="table-container">
+        <table>
+            <tr class="red-bg">
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td class="cart-info">
+                    <img class="img" src="images/buy-1.jpg" alt="">
+                    <div>
+                        <p class="name">Red Printed T-shirt</p>
+                        <small>Price: $30.00</small>
+                        <a href="">Remove</a>
+                    </div>
+                </td>
+                <td><button class="cart-btn">-</button>
+                    <input type="number" value="1">
+                    <button class="cart-btn">+</button></td>
+                <td><p>$30.00</p></td>
+            </tr>
+            <tr>
+                <td class="cart-info">
+                    <img class="img" src="images/buy-2.jpg" alt="">
+                    <div>
+                        <p class="name">IRX Shoes</p>
+                        <small>Price: $30.00</small>
+                        <a href="">Remove</a>
+                    </div>
+                </td>
+                <td>
+                    <button class="cart-btn">-</button>
+                    <input type="number" value="1">
+                    <button class="cart-btn">+</button>
+                </td>
+                <td><p>$30.00</p></td>
+            </tr>
+            <tr>
+                <td class="cart-info">
+                    <img class="img" src="images/buy-3.jpg" alt="">
+                    <div>
+                        <p class="name">Black Jeans</p>
+                        <small>Price: $30.00</small>
+                        <a href="">Remove</a>
+                    </div>
+                </td>
+                <td><button class="cart-btn">-</button>
+                    <input type="number" value="1">
+                    <button class="cart-btn">+</button></td>
+                <td><p>$30.00</p></td>
+            </tr>
+        </table>
 
+
+        <div class="small-table">
+        <table>
+            <tr class="small-table-row">
+                <td>Subtotal</td>
+                <td>$90.00</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td>$10.00</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>$100.00</td>
+            </tr>
+        </table>
+        </div>
+        </div>
+        </div>
+    <!-- cart end  -->
 
 
     <!-- footer start  -->
@@ -139,7 +182,6 @@
 
 
 
-    <script src="js/all-prod.js"></script>
     <script src="js/app.js"></script>
 </body>
 
